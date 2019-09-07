@@ -18,8 +18,9 @@ window.addEventListener('load', () => {
 
             // Dark sky will not allow calls from a localhost.
             // Use this proxy to allow it to work in localhost
+            const your_API_key = "" // Enter your API key here.
             const proxy = "https://cors-anywhere.herokuapp.com/"
-            const api = `${proxy}https://api.darksky.net/forecast/0e9c615e534ccef3ec9a84ed76eef693/${lat},${long}`;
+            const api = `${proxy}https://api.darksky.net/forecast/${your_API_key}/${lat},${long}`;
 
             fetch(api).then(response => {
                 return response.json();
